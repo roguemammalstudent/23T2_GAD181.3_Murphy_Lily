@@ -25,11 +25,14 @@ public class Button : MonoBehaviour
     }
     private void OnTriggerStay(Collider col)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Keypad0))
         {
             Debug.Log("button triggered");
-            Door.SetActive(!Door.activeInHierarchy);
-            active = true;
+            if (active == false)
+            {
+                Door.SetActive(!Door.activeInHierarchy);
+                active = true;
+            }
         }
     }
 

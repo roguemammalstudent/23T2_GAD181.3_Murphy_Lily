@@ -7,7 +7,7 @@ public class Lever : MonoBehaviour
     [SerializeField] private GameObject Door;
     private void OnTriggerStay(Collider col)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Keypad0))
         {
             Debug.Log("lever triggered");
             Door.SetActive(!Door.activeInHierarchy);
