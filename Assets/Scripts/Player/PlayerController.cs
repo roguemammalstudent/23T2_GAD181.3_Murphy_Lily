@@ -10,31 +10,47 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private KeyCode backKey;
     [SerializeField] private KeyCode leftKey;
     [SerializeField] private KeyCode rightKey;
+    [SerializeField] private Rigidbody rb;
+    private float directionz;
+    private float directionx;
 
+
+    private void Start()
+    {
+        rb = this.GetComponent<Rigidbody>();
+    }
     private void Update()
     {
 
         if (Input.GetKey(forwardKey))
 
         {
-            transform.position += Vector3.forward * Time.deltaTime * movementSpeed;
+            directionz = 1 * Time.deltaTime * movementSpeed;
         }
 
         if (Input.GetKey(backKey))
 
         {
-            transform.position += Vector3.back * Time.deltaTime * movementSpeed;
+            directionz = -1 * Time.deltaTime * movementSpeed;
         }
         if (Input.GetKey(leftKey))
 
         {
-            transform.position += Vector3.left * Time.deltaTime * movementSpeed;
+            directionx = -1 * Time.deltaTime * movementSpeed;
         }
 
         if (Input.GetKey(rightKey))
 
         {
-            transform.position += Vector3.right * Time.deltaTime * movementSpeed;
+            directionx =  1 * Time.deltaTime * movementSpeed;
         }
     }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector3(directionx, rb.velocity.y, directionz);
+    }
+
+
+
 }
