@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Skip : MonoBehaviour
 {
 
-    void SkipLevel()
+    public void SkipLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
