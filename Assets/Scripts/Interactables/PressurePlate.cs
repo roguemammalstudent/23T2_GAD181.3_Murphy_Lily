@@ -6,6 +6,9 @@ public class PressurePlate : MonoBehaviour
 {
 
     [SerializeField] private GameObject Door;
+
+    public DoorParticleController doorParticleController;
+
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -19,6 +22,7 @@ public class PressurePlate : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Door.SetActive(false);
+            doorParticleController.PlayParticleEffect();
         }
     }
     private void OnTriggerExit(Collider other)
@@ -26,6 +30,7 @@ public class PressurePlate : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Door.SetActive(true);
+            doorParticleController.PlayParticleEffect();
         }
     }
 }

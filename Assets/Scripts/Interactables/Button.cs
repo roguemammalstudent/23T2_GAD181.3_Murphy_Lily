@@ -9,6 +9,8 @@ public class Button : MonoBehaviour
     private float timeCount;
     private bool active;
 
+    public DoorParticleController doorParticleController;
+
     private void Update()
     {
         if (active == true)
@@ -20,6 +22,7 @@ public class Button : MonoBehaviour
                 Door.SetActive(!Door.activeInHierarchy);
                 timeCount = 0;
                 active = false;
+                doorParticleController.PlayParticleEffect();
             }
         }
     }
@@ -32,6 +35,7 @@ public class Button : MonoBehaviour
             {
                 Door.SetActive(!Door.activeInHierarchy);
                 active = true;
+                doorParticleController.PlayParticleEffect();
             }
         }
     }

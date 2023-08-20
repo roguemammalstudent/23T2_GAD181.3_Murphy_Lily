@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Lever : MonoBehaviour
 {
+    public DoorParticleController doorParticleController;
+
     [SerializeField] private GameObject Door;
     private void OnTriggerStay(Collider col)
     {
@@ -11,6 +13,7 @@ public class Lever : MonoBehaviour
         {
             Debug.Log("lever triggered");
             Door.SetActive(!Door.activeInHierarchy);
+            doorParticleController.PlayParticleEffect();
         }
     }
 }
