@@ -9,7 +9,7 @@ public class Button : MonoBehaviour
     private float timeCount;
     private bool active;
 
-    public DoorParticleController doorParticleController;
+    public GameObject doorParticle;
 
     private void Update()
     {
@@ -22,7 +22,7 @@ public class Button : MonoBehaviour
                 Door.SetActive(!Door.activeInHierarchy);
                 timeCount = 0;
                 active = false;
-                doorParticleController.PlayParticleEffect();
+                Instantiate(doorParticle, Door.transform.position, Quaternion.identity);
             }
         }
     }
@@ -35,7 +35,7 @@ public class Button : MonoBehaviour
             {
                 Door.SetActive(!Door.activeInHierarchy);
                 active = true;
-                doorParticleController.PlayParticleEffect();
+                Instantiate(doorParticle, Door.transform.position, Quaternion.identity);
             }
         }
     }

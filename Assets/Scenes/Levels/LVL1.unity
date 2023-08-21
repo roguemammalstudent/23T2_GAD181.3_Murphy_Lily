@@ -551,10 +551,6 @@ PrefabInstance:
       propertyPath: Door
       value: 
       objectReference: {fileID: 152280325}
-    - target: {fileID: 3920710540668012323, guid: 900deba5feda0c540b1bfd6be4cfc847, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 448b90faa47e2eb46b00ebdc620a2486, type: 2}
     - target: {fileID: 3920710540668012333, guid: 900deba5feda0c540b1bfd6be4cfc847, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1082,10 +1078,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8626197180203569080, guid: 920ba79720c0eb445862e94bd578495d, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 504a0261b55c6f8449eaa085fd523d0c, type: 2}
     - target: {fileID: 8626197180203569082, guid: 920ba79720c0eb445862e94bd578495d, type: 3}
       propertyPath: Door
       value: 
@@ -2843,10 +2835,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lever
       objectReference: {fileID: 0}
-    - target: {fileID: 4298073661349419124, guid: 31653e5d8f8d4aa4eb9460d085fad117, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e7ea453e051194a45bed664de1406577, type: 2}
     - target: {fileID: 4298073661349419126, guid: 31653e5d8f8d4aa4eb9460d085fad117, type: 3}
       propertyPath: Door
       value: 
